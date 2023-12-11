@@ -1,6 +1,8 @@
 package com.example.demo.student;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -19,7 +21,11 @@ public class Student {
             generator = "student_sequence"
     )
     private Long id;
+
+    @NotBlank(message = "Name is mandatory")
     private String name;
+
+    @Email
     private  String email;
     private LocalDate dob;
 

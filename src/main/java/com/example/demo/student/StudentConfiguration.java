@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Configuration;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
-import java.util.Locale;
 
 @Configuration
 public class StudentConfiguration {

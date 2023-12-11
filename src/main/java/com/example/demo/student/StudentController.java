@@ -1,10 +1,8 @@
 package com.example.demo.student;
 
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.time.LocalDate;
-import java.time.Month;
 import java.util.List;
 
 @RestController
@@ -25,7 +23,7 @@ public class StudentController {
     }
 
     @PostMapping
-    public void registerStudent(@RequestBody Student student) {
+    public void registerStudent(@Valid @RequestBody Student student) {
         studentService.addNewStudent(student);
     }
 
